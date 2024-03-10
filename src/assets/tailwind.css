@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+h1 {
+    @apply font-Raleway font-bold text-5xl text-center text-secondary-clr;
+}
+
+h2 {
+    @apply font-Raleway font-semibold text-xl text-center text-secondary-clr;
+}
+
+p {
+    @apply font-Lato font-normal text-sm text-center;
+}
+  
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+
+  h1, h2, p {
+    @apply text-left;
+  }
+}
+  
