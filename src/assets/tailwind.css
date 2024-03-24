@@ -13,7 +13,7 @@ h1 {
     @apply font-Raleway font-bold text-5xl text-center text-secondary-clr;
 }
 
-h2 {
+h2,h3 {
     @apply font-Raleway font-semibold text-xl text-center text-secondary-clr;
 }
 
@@ -33,7 +33,7 @@ p {
     padding: 0 2rem;
   }
 
-  h1, h2, p {
+  h1, h2, h3, p {
     @apply text-left;
   }
 }

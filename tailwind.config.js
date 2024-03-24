@@ -6,6 +6,7 @@ export default {
       colors: {
         "primary-clr": "#C4D7FD",
         "secondary-clr": "#5E17EB",
+        "tertiary-clr": "#4B10BF",
       },
     },
     fontFamily: {

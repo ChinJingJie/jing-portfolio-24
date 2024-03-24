@@ -1,5 +1,5 @@
 <template>
-  <header class="leading-normal max-h-screen md:flex place-items-center">
+  <header class="leading-normal max-h-screen md:flex place-items-center mr-5">
     <img alt="Vue logo" class="relative block z-10 rounded-full m-auto" src="@/assets/profilepic.jpeg" width="180" height="180" />
 
     <div class="wrapper">
@@ -13,12 +13,13 @@
       <nav class="relative content-center text-center md:text-left">
         <RouterLink to="/" class="inline-block p-4 md:block">Home</RouterLink>
         <RouterLink to="/projects" class="inline-block p-4 md:block">Projects</RouterLink>
-        <RouterLink to="/contact" class="inline-block p-4 md:block">Contact</RouterLink>
+        <RouterLink to="/contact" class="inline-block p-4 md:block">Contacts</RouterLink>
         <RouterLink to="/resume" class="inline-block p-4 md:block">Resume</RouterLink>
         <RouterLink to="/faq" class="inline-block p-4 md:block">FAQ</RouterLink>
       </nav>
     </div>
   </header>
+  <!-- add horizontal line when normal, add vertical line when md-->
   <RouterView></RouterView>
 </template>
 
