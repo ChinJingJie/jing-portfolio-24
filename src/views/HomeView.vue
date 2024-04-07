@@ -2,17 +2,19 @@
 import { ref } from 'vue';
 
 const paragrphs = ref([
-  { content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat non libero non venenatis. Vestibulum nec magna quis erat pellentesque condimentum. Mauris at felis ut purus suscipit pulvinar quis at velit. Proin feugiat sapien ut nisl condimentum, nec blandit quam commodo. Nam placerat egestas mauris, sed ullamcorper nisl sollicitudin sit amet. Sed rhoncus viverra risus nec vestibulum. Ut quis ligula rhoncus, rhoncus libero nec, consequat dolor. Pellentesque tincidunt odio id eros porta, id finibus metus gravida. Vivamus sit amet rhoncus mi, congue pharetra sem." },
-  { content: "Duis sit amet posuere mauris. Pellentesque in sem quam. Aliquam erat volutpat. Nullam eleifend, metus quis posuere gravida, dui justo aliquam arcu, a vulputate metus sem nec dolor. Sed sollicitudin mattis facilisis. Suspendisse at mauris a mi posuere accumsan scelerisque quis elit. Morbi quis semper metus, quis malesuada risus. Integer id pulvinar lectus. Vestibulum porttitor tortor et consequat luctus. Donec enim justo, aliquet eget arcu vel, pharetra consequat felis. Quisque a finibus neque, sed luctus ipsum. Phasellus sodales, lorem eu scelerisque efficitur, lectus sapien fermentum dolor, quis semper lacus ligula lacinia nisl. Fusce congue massa nec augue molestie gravida. Fusce ac mauris nibh." },
-  { content: "Aliquam erat volutpat. Aenean aliquet nunc sit amet lobortis sodales. Aliquam sem nisi, blandit ut lacus sed, blandit interdum nisi. Vestibulum facilisis lorem mi. Praesent eu tellus fringilla, elementum neque at, tempor dolor. Vestibulum placerat sagittis egestas. Nulla vitae pulvinar odio. Vivamus nec est sed tortor accumsan congue. Donec consequat ultricies libero, quis suscipit neque posuere eu. Aenean turpis risus, bibendum sed nulla a, sollicitudin maximus leo. Cras cursus mi quis lectus tincidunt, et malesuada eros tincidunt. Nulla facilisi. Fusce laoreet ex quis arcu tempus semper." },
+  { content: "I am Jing, hailing from Johor, Malaysia, and as a member of Gen Z, I find solace in the quietude of a crowd. However, my demeanor transforms into that of an extrovert when the conversation veers towards topics of coding or technology. The thrill of successfully developing new features for websites and mobile apps fills me with immense joy, thanks to the coding skills I have honed." },
+  { content: "My coding journey commenced at the age of 15 when I delved into block coding on code.org. Along the way, my interests fluctuated, yet after exploring various fascinating avenues, I found that coding provided me with the most profound mental satisfaction while also ensuring a livelihood." },
+  { content: "Proudly, I can affirm that I possess strong fundamentals to establish myself as an IT professional. A defining moment in my university life was presenting our final year research project on the Reverse Drug Discovery Web Portal at the ASEAN Australia Engineering Congress 2022 (AAEC2022)." },
+  { content: "I consider myself fortunate to pursue a career as a developer. While many of my college peers with computer science certifications ventured into different sectors, I secured a position as a web and mobile developer. I attribute this to my competitiveness, which has brought me luck. The challenges encountered in my professional life have provided invaluable experiences, enhancing both my soft skills and technical knowledge. Through perseverance, I have evolved from a novice to a seasoned developer; after all, practice makes perfect." },
+  { content: "In essence, this summarizes my journey of growth as a professional developer. Feel free to engage with me if you wish to delve deeper into my experiences." },
 ]);
 </script>
 
 <template>
-  <div class="relative max-h-screen my-auto md:py-5 md:overflow-y-scroll">
-    <h2 class="text-4xl">My Story</h2>
-    <div v-for="paragrph in paragrphs" :key="paragrph" >
-      <p class="mt-10 text-l">{{ paragrph.content }}</p>
+  <div class="relative max-h-screen md:py-5 md:overflow-y-scroll">
+    <h2 class="text-4xl mb-10">My Story</h2>
+    <div v-for="paragrph in paragrphs" :key="paragrph">
+      <p class="mb-5 text-l">{{ paragrph.content }}</p>
     </div>
   </div>
 </template>
