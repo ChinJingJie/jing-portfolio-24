@@ -6,16 +6,17 @@ function openInNewTab(url) {
 }
 
 const paragrphs = ref([
-  { content: "Let's delve deeper into my ISFJ personality traits before you review my resume. I have a fondness for animals, and if I were to choose a representative, it would undoubtedly be the porcupine. Much like the porcupine, I prioritize security and safety in relationships, making others feel at ease in my presence." },
-  { content: "Furthermore, I'd like to emphasize my strength as a team player. Being naturally organized, I meticulously attend to details during discussions and development processes. I actively listen to others' perspectives and provide unwavering support to my colleagues." },
-  { content: "In essence, this brief overview encapsulates key aspects of my personality. For a comprehensive understanding of my professionalism, I encourage you to peruse my resume." },
+  { content: "Before you delve into my resume, let me provide you with insights into how my personality traits contribute to my effectiveness in the IT industry. As an ISFJ, I bring a unique blend of traits that are invaluable in a technology-driven environment." },
+  { content: "Much like the porcupine, which prioritizes security and safety, I am deeply committed to ensuring the integrity and safety of digital systems. My meticulous attention to detail and methodical approach to problem-solving make me well-suited for tasks that require precision and accuracy, such as coding and debugging." },
+  { content: "Moreover, my fondness for animals reflects my empathetic nature, which translates into my ability to understand end-users' needs and preferences. As a team player, I thrive in collaborative environments where I actively listen to diverse perspectives and offer unwavering support to my colleagues. My natural inclination towards organization ensures that projects are well-managed and deadlines are met efficiently." },
+  { content: "In essence, my ISFJ personality traits enable me to excel in the IT industry by prioritizing security, fostering collaboration, and delivering results with precision and empathy. I encourage you to explore my resume for a comprehensive overview of my professional qualifications and achievements." },
 ]);
 </script>
 
 <template>
   <div class="relative max-h-screen my-auto md:py-5 md:overflow-y-scroll">
-    <h2 class="text-4xl">Resume</h2>
-    <img alt="Vue logo" class="relative block z-10 m-auto" src="@/assets/defender.png" width="300" height="300" />
+    <h2 class="text-4xl pb-5">Resume</h2>
+    <img alt="Porcupine personality traits" class="relative block z-10 float-end" src="@/assets/defender.png" width="200" height="200" />
     <div v-for="paragrph in paragrphs" :key="paragrph">
       <p class="mb-5 text-l">{{ paragrph.content }}</p>
     </div>

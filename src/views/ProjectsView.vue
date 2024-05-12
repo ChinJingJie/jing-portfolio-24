@@ -13,20 +13,44 @@ const codingPlatforms = ref([
 
 const projectslist = ref([
   {
-    name: "COS30081 Credit Task", desc: "A well trained CNN model to analyse message posted related to natural disaster.",
-    tags: [{id: 'uni coursework' },{id: 'NLP'}]
+    name: "Grocery Bud", desc: "A Recat project that manage your grocery list.",
+    tags: [{id: 'CRUD' },{id: 'React'}],
+    link: 'https://codepen.io/Kocek/full/ExJzEdW'
   },
   {
-    name: "SWE30011 Auto Gate System", desc: "An Iot project to simulate an auto gate system idea",
-    tags: [{id: 'uni coursework' },{id: 'IOT'}]
+    name: "Tower of Hanoi", desc: "A React project that builds the classic mathematical puzzle game.",
+    tags: [{id: 'Game' },{id: 'React'}],
+    link: 'https://codepen.io/Kocek/full/OJGadJa'
   },
   {
-    name: "SWE20001 Snake Game", desc: "A console game for fun only. Also use to boost profesionalism. PT9.1 has video link",
-    tags: [{id: 'uni coursework' },{id: 'console'}]
+    name: "Member Dashboard", desc: "A React project that renders member details in card view.",
+    tags: [{id: 'REST API' },{id: 'React'}],
+    link: 'https://codepen.io/Kocek/full/XWQwZGv'
   },
   {
-    name: "Y1S2 MCCMA", desc: "A console game for fun only. Also use to boost profesionalism. PT9.1 has video link",
-    tags: [{id: 'uni coursework' },{id: 'oop c#'}]
+    name: "Survey Form", desc: "A survey form that collects user opinions on game played.",
+    tags: [{id: 'Form' },{id: 'HTML'},{id: 'CSS'}],
+    link: 'https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form'
+  },
+  {
+    name: "Product Landing Page", desc: "A product landing page for folding piano.",
+    tags: [{id: 'Web page' },{id: 'HTML'},{id: 'CSS'}],
+    link: 'https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-product-landing-page-project/build-a-product-landing-page'
+  },
+  {
+    name: "Javascript Drumkit", desc: "A virtual drum for you to play music online.",
+    tags: [{id: 'Music' },{id: 'HTML'},{id: 'CSS'},{id: 'JavaScript'}],
+    link: 'https://github.com/ChinJingJie/JavaScriptDrumKit'
+  },
+  {
+    name: "Spelling Checker", desc: "An application help in checking English spelling and return correct word.",
+    tags: [{id: 'GUI applications' },{id: 'Python'},{id: 'Tkinter'}],
+    link: 'https://github.com/ChinJingJie/Spelling_Checker'
+  },
+  {
+    name: "Identifying Natural Disaster", desc: "A trained CNN model that identify users post related to natural disaster.",
+    tags: [{id: 'Natural Language Processing' },{id: 'Python'},{id: 'CNN'}],
+    link: 'https://colab.research.google.com/drive/18BjOrvT_7nRwBByUg8PyydLL-sI84x42?usp=sharing'
   }
 
 ])
@@ -36,9 +60,28 @@ const projectslist = ref([
 <template>
   <div class="relative max-h-screen my-auto md:py-5 md:overflow-y-scroll">
     <h2 class="text-4xl">Projects</h2>
+    <div class="mt-5">
+      <div v-for="project in projectslist" :key="project" class="px-6 mt-1/2 inline-block w-full rounded overflow-hidden shadow-lg bg-white border-secondary-clr border-2">
+        <div class="py-2">
+          <div class="text-secondary-clr font-bold text-l"> 
+            {{ project.name }}
+            <button type="button" role="link" @click="openInNewTab(project.link)"
+          class="text-white bg-secondary-clr hover:bg-tertiary-clr rounded-lg text-sm p-1 text-center">
+              <svg class="w-3 h-3 text-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 512 512">
+                <path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/>
+              </svg>
+            </button>
+          </div>
+          <p>{{ project.desc }}</p>
+        </div>
+        <div v-for="tag in project.tags" :key="tag" class="mr-2 inline">
+          <span class="inline-block bg-secondary-clr rounded-full px-3 py-1 text-xs font-semibold text-white mb-2">#{{ tag.id }}</span>
+        </div>
+      </div>
+    </div>
     <div class="flex flex-col flex-1 items-center justify-center md:items-start">
       <div class="mt-5">
-        <p>More projects at :</p>
+        <p class="mb-5">More projects in...</p>
         <button v-for="platform in codingPlatforms" :key="platform" type="button" role="link" @click="openInNewTab(platform.link)"
           class="text-white bg-secondary-clr hover:bg-tertiary-clr rounded-lg text-sm p-3 text-center me-2">
           <svg class="w-6 h-6 text-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="white" :viewBox=platform.viewBox>
@@ -46,15 +89,6 @@ const projectslist = ref([
           </svg>
           <span class="sr-only">{{ platform.desc }}</span>
         </button>
-      </div>
-    </div>
-    <div v-for="project in projectslist" :key="project" class="mt-10 inline-block max-w-60 rounded overflow-hidden shadow-lg bg-white border-secondary-clr border-2 m-2">
-      <div class="px-6 py-4">
-        <div class="text-secondary-clr font-bold text-l mb-2"> {{ project.name }}</div>
-        <p>{{ project.desc }}</p>
-      </div>
-      <div v-for="tag in project.tags" :key="tag" class="ml-2">
-        <span class="inline-block bg-secondary-clr rounded-full px-3 py-1 text-xs font-semibold text-white mr-2 mb-2">#{{ tag.id }}</span>
       </div>
     </div>
   </div>

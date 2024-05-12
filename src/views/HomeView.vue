@@ -12,7 +12,7 @@ const paragrphs = ref([
 
 <template>
   <div class="relative max-h-screen md:py-5 md:overflow-y-scroll">
-    <h2 class="text-4xl mb-10">My Story</h2>
+    <h2 class="text-4xl mb-5">My Story</h2>
     <div v-for="paragrph in paragrphs" :key="paragrph">
       <p class="mb-5 text-l">{{ paragrph.content }}</p>
     </div>
