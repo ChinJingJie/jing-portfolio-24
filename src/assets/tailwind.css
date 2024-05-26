@@ -4,21 +4,24 @@
 
 #app {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
   font-weight: normal;
 }
 
 h1 {
-    @apply font-Raleway font-bold text-5xl text-center text-secondary-clr;
+    @apply font-Raleway font-bold text-5xl text-left text-primary-clr;
 }
 
-h2,h3 {
-    @apply font-Raleway font-semibold text-xl text-center text-secondary-clr;
+h2, h4 {
+    @apply font-Raleway font-semibold text-xl text-left text-secondary-clr;
+}
+
+h3 {
+  @apply font-Raleway font-semibold text-xl text-left text-primary-clr;
 }
 
 p {
-    @apply font-Lato font-normal text-sm text-center;
+    @apply font-Lato font-normal text-sm text-left;
 }
   
 @media (min-width: 1024px) {
@@ -30,11 +33,6 @@ p {
   #app {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
-  h1, h2, h3, p {
-    @apply text-left;
   }
 }
   

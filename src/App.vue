@@ -12,6 +12,21 @@ function addMailWindow(email) {
   window.open('mailto:'+email+'?subject=Mail From Portfolio Website');
 }
 
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+
+  if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+}
+
+const sectionList = ref([
+  { label: 'My Story', path: '/', id: 'story' },
+  { label: 'Projects', path: '/projects', id: 'projects' },
+  { label: 'Resume', path: '/resume', id: 'resume' },
+  { label: 'My Thoughts', path: '/thoughts', id:'thoughts' },
+]);
+
 const socialMedias = ref([
   { desc: "Facebook", link: "https://www.facebook.com/jingjie.chin.7/", viewBox: "0 0 512 512", path: "M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" },
   { desc: "LinkedIn", link: "https://www.linkedin.com/in/jing-jie-chin-361bb0215/", viewBox: "0 0 448 512", path: "M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" },
@@ -21,18 +36,18 @@ const socialMedias = ref([
 </script>
 
 <template>
-  <header class="leading-normal max-h-screen md:flex m-5">
+  <header class="leading-normal bg-secondary-clr text-primary-clr h-fit p-8 md:flex md:h-screen">
 
     <div class="wrapper">
       <Particles />
       <div class="relative block mb-5 md:flex">
-        <img alt="Vue logo" class="block rounded-full m-auto md:items-start" src="@/assets/profilepic.jpeg" width="180" height="180" />
-        <div class="items-center m-auto md:items-start md:ml-5">
-          <div class="flex flex-col flex-1 items-center justify-center md:items-start">
+        <img alt="Profile Picture" class="block rounded-full m-auto md:items-start" src="@/assets/profilepic.jpeg" width="180" height="180" />
+        <div class="items-center m-auto md:items-start md:ml-10">
+          <div class="flex flex-wrap items-center justify-center w-full md:items-start md:justify-start">
             <div class="mt-5">
               <button v-for="media in socialMedias" :key="media" type="button" role="link" @click="media.desc != 'Email' ? openInNewTab(media.link) : addMailWindow(media.link)"
-                class="text-white bg-secondary-clr hover:bg-tertiary-clr rounded-lg text-sm p-3 text-center me-2">
-                <svg class="w-6 h-6 text-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="white" :viewBox=media.viewBox>
+                class="text-white bg-secondary-clr hover:bg-tertiary-clr rounded-lg text-sm p-4 m-1 text-center me-2 md:w-1/3">
+                <svg class="w-6 h-6 text-center  md:m-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="white" :viewBox=media.viewBox>
                   <path stroke="currentColor" stroke-width="2" :d=media.path />
                 </svg>
                 <span class="sr-only">{{ media.desc }}</span>
@@ -43,18 +58,17 @@ const socialMedias = ref([
       </div>
 
       <Profile 
-        nickname="Jing" 
+        nickname="Jing Jie" 
         position="Web / Mobile Full Stack Developer" 
         intro="Have working experience in Java, React, Python & MS SQL"
       />
 
-      <nav class="relative content-center text-center md:text-left">
-        <RouterLink to="/" class="inline-block p-4 md:block">My Story</RouterLink>
-        <RouterLink to="/projects" class="inline-block p-4 md:block">Projects</RouterLink>
-        <RouterLink to="/resume" class="inline-block p-4 md:block">Resume</RouterLink>
-        <RouterLink to="/thoughts" class="inline-block p-4 md:block">My Thoughts</RouterLink>
+      <nav class="flex flex-wrap items-center justify-center w-full md:items-start md:justify-start">
+        <button v-for="section in sectionList" :key="section" @click="scrollToSection(section.id)" class="z-10 justify-center content-center border-solid border-2 border-primary-clr bg-secondary-clr hover:bg-tertiary-clr m-1 md:w-5/12">
+          <RouterLink :to=section.path class="block text-center w-full font-extrabold p-4">{{ section.label }}</RouterLink>
+        </button>
       </nav>
     </div>
   </header>
-  <RouterView></RouterView>
+  <RouterView class="p-8"></RouterView>
 </template>

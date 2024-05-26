@@ -18,10 +18,10 @@ const qalist = ref([
 </script>
 
 <template>
-  <div class="relative max-h-screen pb-5 my-auto md:py-5 md:overflow-y-scroll">
+  <div id="thoughts" class="relative max-h-screen pb-5 my-auto md:py-5 md:overflow-y-scroll">
     <h2 class="text-4xl pb-5">My Thoughts</h2>
     <div class="pb-5" v-for="qa in qalist" :key="qa">
-      <h3>{{ qa.q }}</h3>
+      <h4>{{ qa.q }}</h4>
       <p>{{ qa.a }}</p>
     </div>
   </div>

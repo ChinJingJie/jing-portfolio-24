@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary-clr": "#C4D7FD",
-        "secondary-clr": "#5E17EB",
-        "tertiary-clr": "#4B10BF",
+        "primary-clr": "#FFFFFF",
+        "secondary-clr": "#000000",
+        "tertiary-clr": "#3C4142",
       },
     },
     fontFamily: {
@@ -14,7 +14,6 @@ export default {
       Lato: [ "Lato", "sans-serif"],
     },
     container: {
-      padding: "2rem",
       center: true,
     },
     screens: {

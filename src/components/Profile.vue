@@ -17,8 +17,8 @@ defineProps({
 
 <template>
   <div class="relative">
-    <h1>{{ nickname }}</h1>
-    <h2>{{ position }}</h2>
-    <p>{{ intro }}</p>
+    <h1 class="mb-3 text-center md:text-left">{{ nickname }}</h1>
+    <h3 class="text-center md:text-left">{{ position }}</h3>
+    <p class="mb-3 text-center md:text-left">{{ intro }}</p>
   </div>
 </template>

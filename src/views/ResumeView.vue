@@ -14,14 +14,14 @@ const paragrphs = ref([
 </script>
 
 <template>
-  <div class="relative max-h-screen my-auto md:py-5 md:overflow-y-scroll">
+  <div id="resume" class="relative max-h-screen my-auto pb-5 md:py-5 md:overflow-y-scroll">
     <h2 class="text-4xl pb-5">Resume</h2>
-    <img alt="Porcupine personality traits" class="relative block z-10 float-end" src="@/assets/defender.png" width="200" height="200" />
+    <!-- <img alt="Porcupine personality traits" class="relative block z-10 float-end" src="@/assets/defender.png" width="200" height="200" /> -->
     <div v-for="paragrph in paragrphs" :key="paragrph">
       <p class="mb-5 text-l">{{ paragrph.content }}</p>
     </div>
     <div class="block mt-5">
-      <button type="button" role="link" @click="openInNewTab('https://1drv.ms/b/s!AvFZmcpPLMl-hFrAUH3xauflaRnD?e=rijpJV')"
+      <button type="button" role="link" @click="openInNewTab('https://1drv.ms/b/s!AvFZmcpPLMl-hFsE14m6bOLBpQno?e=9kuwfa')"
         class="text-white bg-secondary-clr hover:bg-tertiary-clr rounded-lg text-sm p-3 text-center me-2">
         View My Resume
       </button>

@@ -8,7 +8,7 @@
             :options="{
                     background: {
                         color: {
-                            value: '#C4D7FD'
+                            value: '#FFFFF'
                         }
                     },
                     fullScreen: {
@@ -32,7 +32,7 @@
                                 distance: 400,
                                 duration: 2,
                                 opacity: 0.8,
-                                size: 40
+                                size: 50
                             },
                             push: {
                                 quantity: 4
@@ -45,13 +45,13 @@
                     },
                     particles: {
                         color: {
-                            value: '#ffffff'
+                            value: '#3C4142'
                         },
                         links: {
-                            color: '#ffffff',
+                            color: '#3C4142',
                             distance: 150,
                             enable: true,
-                            opacity: 0.5,
+                            opacity: 0.8,
                             width: 1
                         },
                         move: {
@@ -66,7 +66,7 @@
                             density: {
                                 enable: true,
                             },
-                            value: 80
+                            value: 50
                         },
                         opacity: {
                             value: 0.5

@@ -37,16 +37,16 @@ const projectslist = ref([
     tags: [{id: 'Web page' },{id: 'HTML'},{id: 'CSS'}],
     link: 'https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-product-landing-page-project/build-a-product-landing-page'
   },
-  {
-    name: "Javascript Drumkit", desc: "A virtual drum for you to play music online.",
-    tags: [{id: 'Music' },{id: 'HTML'},{id: 'CSS'},{id: 'JavaScript'}],
-    link: 'https://github.com/ChinJingJie/JavaScriptDrumKit'
-  },
-  {
-    name: "Spelling Checker", desc: "An application help in checking English spelling and return correct word.",
-    tags: [{id: 'GUI applications' },{id: 'Python'},{id: 'Tkinter'}],
-    link: 'https://github.com/ChinJingJie/Spelling_Checker'
-  },
+  // {
+  //   name: "Javascript Drumkit", desc: "A virtual drum for you to play music online.",
+  //   tags: [{id: 'Music' },{id: 'HTML'},{id: 'CSS'},{id: 'JavaScript'}],
+  //   link: 'https://github.com/ChinJingJie/JavaScriptDrumKit'
+  // },
+  // {
+  //   name: "Spelling Checker", desc: "An application help in checking English spelling and return correct word.",
+  //   tags: [{id: 'GUI applications' },{id: 'Python'},{id: 'Tkinter'}],
+  //   link: 'https://github.com/ChinJingJie/Spelling_Checker'
+  // },
   {
     name: "Identifying Natural Disaster", desc: "A trained CNN model that identify users post related to natural disaster.",
     tags: [{id: 'Natural Language Processing' },{id: 'Python'},{id: 'CNN'}],
@@ -58,7 +58,7 @@ const projectslist = ref([
 </script>
 
 <template>
-  <div class="relative max-h-screen my-auto md:py-5 md:overflow-y-scroll">
+  <div id="projects" class="relative max-h-screen my-auto pb-5 md:py-5 md:overflow-y-scroll">
     <h2 class="text-4xl">Projects</h2>
     <div class="mt-5">
       <div v-for="project in projectslist" :key="project" class="px-6 mt-1/2 inline-block w-full rounded overflow-hidden shadow-lg bg-white border-secondary-clr border-2">
@@ -80,7 +80,7 @@ const projectslist = ref([
       </div>
     </div>
     <div class="flex flex-col flex-1 items-center justify-center md:items-start">
-      <div class="mt-5">
+      <div class="my-5">
         <p class="mb-5">More projects in...</p>
         <button v-for="platform in codingPlatforms" :key="platform" type="button" role="link" @click="openInNewTab(platform.link)"
           class="text-white bg-secondary-clr hover:bg-tertiary-clr rounded-lg text-sm p-3 text-center me-2">
