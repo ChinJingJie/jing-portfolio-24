@@ -13,7 +13,7 @@ const codingPlatforms = ref([
 
 const projectslist = ref([
   {
-    name: "Grocery Bud", desc: "A Recat project that manage your grocery list.",
+    name: "Grocery Bud", desc: "A React project that manage your grocery list.",
     tags: [{id: 'CRUD' },{id: 'React'}],
     link: 'https://codepen.io/cjjie/full/ExJzEdW'
   },
