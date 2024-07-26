@@ -13,6 +13,11 @@ const codingPlatforms = ref([
 
 const projectslist = ref([
   {
+    name: "Simple Calculator", desc: "A personal project developed in Go (Golang) to demonstrate my understanding of Go programming concepts. This simple calculator showcases basic operations and serves as a practical example of my ability to implement Go's syntax and features.",
+    tags: [{id: 'Console' },{id: 'Go'}],
+    link: 'https://github.com/ChinJingJie/SimpleCalc_Go_Lang'
+  },
+  {
     name: "Grocery Bud", desc: "A React project that manage your grocery list.",
     tags: [{id: 'CRUD' },{id: 'React'}],
     link: 'https://codepen.io/cjjie/full/ExJzEdW'
@@ -37,16 +42,6 @@ const projectslist = ref([
     tags: [{id: 'Web page' },{id: 'HTML'},{id: 'CSS'}],
     link: 'https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-product-landing-page-project/build-a-product-landing-page'
   },
-  // {
-  //   name: "Javascript Drumkit", desc: "A virtual drum for you to play music online.",
-  //   tags: [{id: 'Music' },{id: 'HTML'},{id: 'CSS'},{id: 'JavaScript'}],
-  //   link: 'https://github.com/ChinJingJie/JavaScriptDrumKit'
-  // },
-  // {
-  //   name: "Spelling Checker", desc: "An application help in checking English spelling and return correct word.",
-  //   tags: [{id: 'GUI applications' },{id: 'Python'},{id: 'Tkinter'}],
-  //   link: 'https://github.com/ChinJingJie/Spelling_Checker'
-  // },
   {
     name: "Identifying Natural Disaster", desc: "A trained CNN model that identify users post related to natural disaster.",
     tags: [{id: 'Natural Language Processing' },{id: 'Python'},{id: 'CNN'}],

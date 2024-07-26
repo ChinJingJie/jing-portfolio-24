@@ -60,7 +60,7 @@ const socialMedias = ref([
       <Profile 
         nickname="Jing Jie" 
         position="Web / Mobile Full Stack Developer" 
-        intro="Have working experience in Java, React, Python & MS SQL"
+        intro="Software engineer with expertise in Java, React, Python, and MS SQL, and a demonstrated commitment to Go through a personal calculator project designed to showcase my proficiency in the language, seeking to leverage diverse skills in a dynamic role in Singapore."
       />
 
       <nav class="flex flex-wrap items-center justify-center w-full md:items-start md:justify-start">

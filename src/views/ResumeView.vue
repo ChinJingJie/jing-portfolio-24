@@ -21,7 +21,7 @@ const paragrphs = ref([
       <p class="mb-5 text-l">{{ paragrph.content }}</p>
     </div>
     <div class="block mt-5">
-      <button type="button" role="link" @click="openInNewTab('https://1drv.ms/b/s!AvFZmcpPLMl-hFsE14m6bOLBpQno?e=9kuwfa')"
+      <button type="button" role="link" @click="openInNewTab('https://1drv.ms/b/s!AvFZmcpPLMl-hFyl8x4al5joDI8i?e=3NWulk')"
         class="text-white bg-secondary-clr hover:bg-tertiary-clr rounded-lg text-sm p-3 text-center me-2">
         View My Resume
       </button>
